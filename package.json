@@ -1,0 +1,49 @@
+{
+  "name": "tiktok-linux",
+  "version": "1.0.0",
+  "description": "TikTok Client for Linux",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --linux",
+    "build": "electron-builder --linux"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dvytvs/TikTok-Linux.git"
+  },
+  "keywords": [
+    "tiktok",
+    "electron",
+    "linux",
+    "video"
+  ],
+  "author": "dvytvs",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.0"
+  },
+  "build": {
+    "appId": "com.dvytvs.tiktok-linux",
+    "productName": "TikTok Linux",
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "icon": "build/icons/linux",
+      "category": "Network",
+      "target": [
+        "AppImage",
+        "deb",
+        "pacman",
+        "tar.gz"
+      ],
+      "maintainer": "dvytvs",
+      "synopsis": "TikTok Desktop Client",
+      "desktop": {
+        "StartupWMClass": "tiktok-linux"
+      }
+    }
+  }
+}
